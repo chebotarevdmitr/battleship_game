@@ -1,17 +1,21 @@
 cmake_minimum_required(VERSION 3.16)
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# Минимальная версия CMake, необходимая для сборки проекта.
+
 project(battleship_game)
+# ^^^^^^^^^^^^^^^^^^^^^^^
+# Название проекта.
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# ^^^^^^^^^^^^^^^^^^^^^^^^^
+# Устанавливаем стандарт C++ — C++17 (новый, удобный).
 
-# Источники
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# Требовать именно C++17, иначе сборка не пройдёт.
+
 set(SOURCES
     src/main.cpp
     src/Board.cpp
 )
-
-# Добавляем исполняемый файл
-add_executable(battleship ${SOURCES})
-
-# Указываем путь к заголовкам
-include_directories(include)
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
