@@ -7,7 +7,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Источники
 set(SOURCES
     src/main.cpp
+    src/Board.cpp
 )
 
 # Добавляем исполняемый файл
 add_executable(battleship ${SOURCES})
+
+# Указываем путь к заголовкам
+include_directories(include)

@@ -1,11 +1,9 @@
-#include <iostream>
+#include "../include/Board.h"
 
 int main() {
-    std::cout << "=== BATTLESHIP GAME ===" << std::endl;
-    std::cout << "Starting game..." << std::endl;
-
-    // Temporary placeholder
-    std::cout << "Game logic will be here soon!" << std::endl;
-
+    Board board;
+    board.setCell(2, 3, 'S');  // поставим корабль
+    board.setCell(5, 7, 'X');  // попадание
+    board.print();
     return 0;
 }
